@@ -11,6 +11,8 @@ servidor.use(express.json());
 
 servidor.use(filmeController);
 
+servidor.use('/storage', express.static('./storage'));
+
 
 servidor.listen(
   process.env.PORT,
